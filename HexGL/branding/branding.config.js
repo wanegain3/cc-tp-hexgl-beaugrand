@@ -7,7 +7,7 @@ window.HEXGL_BRANDING = {
   subtitle: "Une expérience événementielle aux couleurs de la marque.",
   startLabel: "DÉMARRER LA COURSE",
   colors: {
-    background: "#08090D", violet: "#7628FF", blue: "#315BFF", cyan: "#00C4E8",
+    background: "#2A0F66", violet: "#7628FF", blue: "#315BFF", cyan: "#00C4E8",
     text: "#FFFFFF", surface: "#E6E8EE",
     gradient: ["#7628FF", "#315BFF"]
   }
