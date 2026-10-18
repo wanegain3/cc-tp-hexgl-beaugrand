@@ -1,0 +1,128 @@
+/* Branding de l'écran d'accueil. Règles scopées sur #step-1.brand-acme :
+   retirer la classe (ou ce fichier) restitue l'accueil d'origine.
+   Les couleurs viennent des variables --brand-* posées par branding.js. */
+
+#step-1.brand-acme {
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  background: var(--brand-background);
+  color: var(--brand-text);
+}
+
+/* Fond sombre de marque, sans image ni animation */
+#step-1.brand-acme #global {
+  position: fixed;
+  background: var(--brand-background);
+  -webkit-animation: none;
+  -moz-animation: none;
+  -o-animation: none;
+  animation: none;
+}
+
+/* Visuel « HexGL by BKcore » retiré de l'accueil */
+#step-1.brand-acme #title {
+  display: none;
+}
+
+#step-1.brand-acme #brand {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+}
+
+/* Logo posé tel quel sur un cartouche clair, avec zone de respiration */
+#step-1.brand-acme #brand-logo-box {
+  width: min(80vw, 420px);
+  padding: clamp(16px, 3vw, 32px);
+  box-sizing: border-box;
+  background: var(--brand-surface);
+  border-radius: 8px;
+}
+
+#step-1.brand-acme #brand-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#step-1.brand-acme #brand-welcome {
+  margin: 24px 0 8px;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-weight: normal;
+  line-height: 1.1;
+  color: var(--brand-text);
+}
+
+#step-1.brand-acme #brand-subtitle {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  letter-spacing: 0.04em;
+  color: var(--brand-surface);
+}
+
+/* Menu en flux normal sous le message (plus de positionnement absolu) */
+#step-1.brand-acme #menucontainer {
+  position: relative;
+  bottom: auto;
+  width: 100%;
+  z-index: 2;
+}
+
+#step-1.brand-acme #menu {
+  color: var(--brand-text);
+}
+
+#step-1.brand-acme #menu div {
+  background: none;
+  text-shadow: none;
+  -webkit-transform: none;
+  transform: none;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+#step-1.brand-acme #menu div:hover {
+  color: var(--brand-cyan);
+}
+
+/* Bouton de démarrage : dégradé événementiel */
+#step-1.brand-acme #menu #start {
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 12px;
+  padding: 0.15em 1em 0.05em;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: var(--brand-text);
+  background: var(--brand-gradient);
+}
+
+#step-1.brand-acme #menu #start:hover {
+  color: var(--brand-background) !important;
+  background: var(--brand-cyan);
+}
+
+@media (max-width: 480px) {
+  #step-1.brand-acme {
+    gap: 16px;
+  }
+  #step-1.brand-acme #menu {
+    font-size: 1.6em;
+  }
+}
